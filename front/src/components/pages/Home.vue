@@ -24,7 +24,7 @@
               </template>
             </v-data-table-virtual>
           </v-card-text>
-          <v-card-title>{{ selectedRecipe.instructions }}</v-card-title>
+          <v-card-text class="recipe-instructions">{{ selectedRecipe.instructions }}</v-card-text>
         </v-card>
       </v-col>
       <v-col v-else v-for="recipe in recipes" :key="recipe.id">
@@ -110,5 +110,11 @@ const selectRecipe = (recipeId) => {
   margin: 20px auto;
   box-sizing: border-box;
   cursor: pointer;
+}
+.recipe-instructions {
+  font-size: 16px;
+  line-height: 1.6; 
+  margin-top: 10px;
+  
 }
 </style>
