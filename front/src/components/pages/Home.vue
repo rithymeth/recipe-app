@@ -27,8 +27,8 @@
           <v-card-text class="recipe-instructions">{{ selectedRecipe.instructions }}</v-card-text>
         </v-card>
       </v-col>
-      <v-col v-else v-for="recipe in recipes" :key="recipe.id">
-        <v-card class="recipe-card" @click="selectRecipe(recipe.id)">
+      <v-col class="flex-fill" v-else v-for="recipe in recipes" :key="recipe.id">
+        <v-card class="recipe-card" @click="selectRecipe(recipe.id)" >
           <v-img :src="recipe.imageUrl" aspect-ratio="2.5"></v-img>
           <v-card-title>{{ recipe.name }}</v-card-title>
         </v-card>

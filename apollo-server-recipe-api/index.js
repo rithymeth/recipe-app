@@ -99,13 +99,10 @@ import { gql } from "graphql-tag";
     typeDefs,
     resolvers,
   });
-
+  const port = process.env.PORT || 3000;
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 8080 },
+    listen: { port },
   });
 
   console.log("Server is ready at " + url);
 })();
-
-
-
